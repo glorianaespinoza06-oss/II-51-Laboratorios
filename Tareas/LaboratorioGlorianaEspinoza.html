@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LAB-03 · Plataforma Educativa</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+  <!-- Nav / Encabezado -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+    <div class="container">
+      <a class="navbar-brand fw-bold brand-badge" href="index.html">
+        Plataforma Educativa
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Mostrar menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <h1 class="display-6 fw-bold mb-2">Plataforma Educativa</h1>
+          <p class="lead text-secondary mb-0">Universidad Central</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Formulario -->
+        <section class="col-lg-6">
+          <div class="card shadow-sm border-0">
+            <div class="card-header bg-white">
+              <h2 class="h5 mb-0">Registro de Usuario</h2>
+            </div>
+            <div class="card-body">
+              <form>
+                <!-- Datos -->
+                <div class="row g-3">
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="username" name="username" placeholder="Nombre de Usuario" required>
+                      <label for="username">Nombre de Usuario</label>
+                      <div class="invalid-feedback">Ingresa un nombre de usuario.</div>
+                       <small id="nameHelp" class="form-text text-muted">Ingrese su nombre comppleto.</small>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                      <label for="email">Correo Electrónico</label>
+                      <small id="emailHelp" class="form-text text-muted">Ingrese un correo válido.</small>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input type="password" class="form-control" id="password" name="password" placeholder="••••••••" minlength="6" required>
+                      <label for="password">Contraseña</label>
+                    </div>
+                  </div>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Género -->
+                <fieldset class="mb-3">
+                  <legend class="fs-6 mb-2">Género</legend>
+                  <div class="row gy-2">
+                    <div class="col-6 col-md-3">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" value="m" name="genero" id="g-m">
+                        <label class="form-check-label" for="g-m">Masculino</label>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" value="f" name="genero" id="g-f">
+                        <label class="form-check-label" for="g-f">Femenino</label>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" value="o" name="genero" id="g-o">
+                        <label class="form-check-label" for="g-o">Otro</label>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" value="n" name="genero" id="g-n">
+                        <label class="form-check-label" for="g-n">Prefiero no decirlo</label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <!-- Intereses -->
+                <fieldset class="mb-3">
+                  <legend class="fs-6 mb-2">Seleccione sus intereses</legend>
+                  <div class="row gy-2">
+                    <div class="col-12 col-sm-6">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="intereses" id="interes1" value="programacion">
+                        <label class="form-check-label" for="interes1">Programación</label>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="intereses" id="interes2" value="diseño">
+                        <label class="form-check-label" for="interes2">Diseño Gráfico</label>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="intereses" id="interes3" value="marketing">
+                        <label class="form-check-label" for="interes3">Marketing Digital</label>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="intereses" id="interes4" value="ciencia">
+                        <label class="form-check-label" for="interes4">Ciencia de Datos</label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-top py-4">
+    <div class="container">
+      <div class="row gy-3 align-items-center">
+        <div class="col-md-4">
+          <h3 class="h6 mb-1 fw-bold">Universidad Central</h3>
+          <small class="text-secondary">© 2023 Plataforma Educativa</small>
+        </div>
+        <div class="col-md-4">
+          <h4 class="h6 mb-1">Información Adicional</h4>
+          <small class="text-secondary d-block">Todos los derechos reservados</small>
+          <small class="text-secondary d-block">Para más información, visite nuestro sitio web.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- bootstrap js   -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+</body>
+</html>
