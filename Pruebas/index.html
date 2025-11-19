@@ -1,0 +1,17 @@
+<input type="text" id="tarea" placeholder="Escribe una tarea" />
+<button onclick="agregarTarea()">Agregar</button>
+<ul id="lista"></ul>
+
+<script>
+  function agregarTarea() {
+    const valor = document.getElementById("tarea").value.trim();
+    if (!valor) return;
+
+    const li = document.createElement("li");
+    li.textContent = valor;
+
+    li.onclick = () => li.remove(); // Eliminar al hacer clic
+    document.getElementById("lista").appendChild(li);
+    document.getElementById("tarea").value = "";
+  }
+</script>

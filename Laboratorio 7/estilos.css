@@ -5,7 +5,7 @@
 }
 
 .caja.color {
-  background-color: #d1ecf1;
+  background-color: #d1ecf1 !important;
   color: #0c5460;
   font-weight: bold;
 }
