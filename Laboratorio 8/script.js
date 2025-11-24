@@ -1,0 +1,3 @@
+let supabasekey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNmYW1yb2t6am5zY2xiaXphYmxoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjEwODU3MDYsImV4cCI6MjA3NjY2MTcwNn0.ebCdxQeV4qP3MK5O-ZXXUBOMz3kKidpudcJyERngV2Q';
+let supabaseurl = 'https://cfamrokzjnsclbizablh.supabase.co';
+const supabase = supabasejs.createClient(supabaseurl, supabasekey);
