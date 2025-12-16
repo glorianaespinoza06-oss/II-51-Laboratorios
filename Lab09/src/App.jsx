@@ -1,13 +1,23 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import niño from './assets/niño.png'
+import adulto from './assets/adulto.png'
 import './App.css'
 import Likebutton from './assets/LikeButton'
 
 function App() {
   // Estado para el contador
   // Uso del hook useState
-  const [count, setCount] = useState(0)
+  const [age, setAge] = useState(0)
+  const [isAdult, setIsAdult] = useState(false)
+  useEffect(() => {
+    if (age >= 18) {
+      setIsAdult(true)
+    } else {
+      setIsAdult(false)
+    }
+  }, [age])
 
   return (
     <>
@@ -21,8 +31,8 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button onClick={() => setAge((age) => age + 1)}>
+          count is {age}
         </button>
         <Likebutton></Likebutton>
         <p>
@@ -32,6 +42,9 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <div className='avatars'>
+          <img src={isAdult ? adulto: niño} className="logo react" alt="avatar" />
+      </div>
     </>
   )
 }
